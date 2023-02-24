@@ -1,0 +1,100 @@
+.header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    /* background-color: blueviolet; */
+    box-sizing: border-box;
+    box-shadow: 0px 0px 5px rgb(31 31 31 / 25%);
+    padding: 10px 15px;
+}
+.header-logo h5{
+    font-size: 24px;
+}
+.header-link{
+    display: flex;
+}
+.icon-link .link{
+    color: black;
+}
+.link:hover{
+    color: #0073e6;
+}
+.header-link .link{   
+    text-decoration: none;
+    font-size: 15px;
+    letter-spacing: 0.5px;
+    /* transition: 0.5s; */
+    margin: 0 25px;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.hovering-box{
+    width: 27px;
+    height: 30px;
+    overflow: hidden;
+    padding: 1px 2px;
+    border-radius: 50%;
+    /* margin-bottom: 5px; */
+}
+.hovering{
+    width: 29px;
+    height: 29px;
+    display: flex;
+    transition: 0.5s;
+    margin-bottom: 0px;
+}
+.link:hover .hovering{
+    transform: translateX(-89%);
+}
+.icon-link{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    line-height: 0px;
+    transition: all 0.5s;
+    margin: 0 10px;
+}
+
+.link::after{
+    content: "";
+    display: block;
+    width: 0%;
+    height: 3px;
+    top: 8%;
+    position: absolute;
+    transition: 0.5s;
+    background: blue;
+}
+.link:hover:after{
+    width: 4%;
+    height: 3px;
+}
+/* .icon-2{
+    position: absolute;
+    visibility: hidden;
+    font-size: 16px;
+    margin-bottom: 4px;
+    transition: 0.5s;
+    transform: translateX(-80%);
+}
+.link:hover .icon-2{
+    visibility: visible;
+    transform: translateX(0%);
+}
+.link:hover .icon{
+    visibility: hidden;
+    transform: translateX(80%)
+} */
+
+.header-btn button{
+    border: solid thin grey;
+    padding: 8px 10px;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 10px;
+}
