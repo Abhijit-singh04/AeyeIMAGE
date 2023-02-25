@@ -1,5 +1,5 @@
 :root{
-    --primary : red;
+    --primary : #0073e6;
     /* --background: yellow; */
 }
 [data-theme="dark"]{
