@@ -1,4 +1,4 @@
-import React from 'react';
+import React , {useRef , useEffect} from 'react';
 import { Link } from 'react-router-dom';
 import "./header.css";
 import HomeIcon from '@mui/icons-material/Home';
@@ -14,7 +14,23 @@ function Header() {
     const newTheme = theme === "light"? "dark" : "light";
     setTheme(newTheme) ;
   }
+ 
+  const ref = useRef(null);
+  const bar = useRef(null);
+  // useEffect(() => {
+  //   const handleClick = event => {
+  //     console.log('Button clicked');
+  //   };
 
+    const element = ref.current;
+    const bart = bar.current;
+
+  //   element.addEventListener('click', handleClick);
+
+  //   return () => {
+  //     element.removeEventListener('click', handleClick);
+  //   };
+  // }, []);
 
 
   return (
@@ -75,7 +91,12 @@ function Header() {
           <Brightness3Icon className='dark' />
           <div class="ball"></div>
         </label>
-        </div>
+      </div>
+      {/* <div className='responsive' ref={ref}>
+        <div className='bar bar1' ref={bar}></div>
+        <div className='bar bar2'></div>
+        <div className='bar bar3'></div>
+      </div> */}
     </div>
   )
 }

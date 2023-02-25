@@ -8,6 +8,7 @@
 }
 body{
     background-color: var(--background);
+    box-sizing: border-box;
 }
 .header{
     display: flex;
@@ -17,7 +18,7 @@ body{
     /* background-color: blueviolet; */
     box-sizing: border-box;
     box-shadow: 0px 0px 5px rgb(31 31 31 / 25%);
-    padding: 12px 15px;
+    padding: 15px;
 }
 .header-logo h5{
     font-size: 24px;
@@ -77,7 +78,7 @@ body{
     display: block;
     width: 0%;
     height: 2px;
-    top: 7.6%;
+    top: 9%;
     position: absolute;
     transition: 0.5s;
     /* background: #0073e6; */
@@ -154,4 +155,67 @@ body , .container , .label{
     z-index: 999;
     margin-top: 2px;
     margin-left: 2px;
+  }
+  .responsive{
+    display: none;
+    visibility: hidden;
+    opacity: 0;
+    width: 3%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s linear;
+  }
+  .bar{
+    transition: 0.5s;
+    width: 50%;
+    margin: 2px;
+    height: 3px;
+    background-color: black;
+  }
+  .responsive:hover{
+    cursor: pointer;
+  }
+  .responsive:hover .bar1 , .bar:hover .bar1{
+    transform: translateY(8px) rotate(45deg);
+  }
+  .responsive:hover .bar2{
+    display: none;
+  }
+  .responsive:hover .bar3 , .bar:hover .bar3{
+    transform: translateY(1px) rotate(-45deg);
+  }
+
+
+  @media screen and (max-width:750px){
+    .header{
+        padding: 10px 2px;
+    }
+    .header-link{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: row;
+        height: -webkit-fill-available;
+        z-index: 999;
+    }
+    .header-link .link{
+        margin: unset;
+    }
+    .link::after{
+        display: none;
+    }
+    .responsive{
+        width: 16%;
+    }
+    .icon-link{
+        margin: 15px 10px;
+    }
+    .toogle-button{
+        display: none;
+        visibility: hidden;
+        opacity: 0;
+    }
   }
