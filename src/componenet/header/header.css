@@ -1,157 +1,221 @@
 :root{
-    --primary : #0073e6;
-    /* --background: yellow; */
+  --primary : #0073e6;
+  /* --background: yellow; */
 }
 [data-theme="dark"]{
-    --primary: #0073e6;
-    /* --background: black; */
+  --primary: #0073e6;
+  /* --background: black; */
 }
 body{
-    background-color: var(--background);
+  background-color: var(--background);
+  box-sizing: border-box;
 }
 .header{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-    /* background-color: blueviolet; */
-    box-sizing: border-box;
-    box-shadow: 0px 0px 5px rgb(31 31 31 / 25%);
-    padding: 12px 15px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  /* background-color: blueviolet; */
+  box-sizing: border-box;
+  box-shadow: 0px 0px 5px rgb(31 31 31 / 25%);
+  padding: 15px;
 }
 .header-logo h5{
-    font-size: 24px;
+  font-size: 24px;
 }
 .header-link{
-    display: flex;
+  display: flex;
 }
 .icon-link .link{
-    color: black;
+  color: black;
 }
 .link:hover{
-    color: #0073e6;
+  color: #0073e6;
 }
 .header-link .link{   
-    text-decoration: none;
-    font-size: 13px;
-    letter-spacing: 0.5px;
-    /* transition: 0.5s; */
-    margin: 0 25px;
-    font-weight: bold;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    color: #0073e6;
+  text-decoration: none;
+  font-size: 13px;
+  letter-spacing: 0.5px;
+  /* transition: 0.5s; */
+  margin: 0 25px;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #0073e6;
 }
 .hovering-box{
-    width: 27px;
-    height: 30px;
-    overflow: hidden;
-    padding: 1px 2px;
-    border-radius: 50%;
-    /* margin-bottom: 5px; */
+  width: 27px;
+  height: 30px;
+  overflow: hidden;
+  padding: 1px 2px;
+  border-radius: 50%;
+  /* margin-bottom: 5px; */
 }
 .hovering{
-    width: 29px;
-    height: 29px;
-    display: flex;
-    transition: 0.5s;
-    margin-bottom: 0px;
+  width: 29px;
+  height: 29px;
+  display: flex;
+  transition: 0.5s;
+  margin-bottom: 0px;
 }
 .link:hover .hovering{
-    transform: translateX(-89%);
+  transform: translateX(-89%);
 }
 .icon-link{
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: 16px;
-    line-height: 0px;
-    transition: all 0.5s;
-    margin: 0 10px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  line-height: 0px;
+  transition: all 0.5s;
+  margin: 0 10px;
 }
 
 .link::after{
-    content: "";
-    display: block;
-    width: 0%;
-    height: 2px;
-    top: 7.6%;
-    position: absolute;
-    transition: 0.5s;
-    /* background: #0073e6; */
-    background-color: var(--primary);
+  content: "";
+  display: block;
+  width: 0%;
+  height: 2px;
+  top: 9%;
+  position: absolute;
+  transition: 0.5s;
+  /* background: #0073e6; */
+  background-color: var(--primary);
 }
 .link:hover:after{
-    width: 4%;
-    height: 2.5px;
+  width: 4%;
+  height: 2.5px;
 }
 .header-btn button{
-    border: solid thin grey;
-    padding: 8px 10px;
-    font-size: 18px;
-    font-weight: 600;
-    border-radius: 10px;
+  border: solid thin grey;
+  padding: 8px 10px;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 10px;
 }
 
 body , .container , .label{
-    transform: background-color 2s linear ;
+  transform: background-color 2s linear ;
+}
+.checkbox:checked + .label .ball{
+  transform: translateX(25px);
+}
+.ball{
+  background-color: white;
+  border-radius: 50%;
+  top: 2px;
+  left: 2px;
+  height: 25px;
+  width: 25px;
+  position: absolute;
+  transition:  0.5s  ;
+}
+
+body.dark .ball{
+  background-color: black;
+  transition: 0.7s;
+}
+.toogle-button{
+  /* position: absolute; */
+  display: flex;
+  justify-content: space-between;
+}
+.label{
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 50px;
+  position: relative;
+  height: 28px;
+  width: 55px;
+}
+
+body.dark .label{
+  /* background-color: white; */
+  border: 2px solid;
+}
+.checkbox{
+  opacity: 0;
+  position:absolute;
+}
+.label:hover{
+  cursor: pointer;
+}
+
+.dark{
+  color: black;
+  z-index: 999;
+  margin-right: 3px;
+  margin-top: 2px;
+}
+.bright{
+  color: black;
+  z-index: 999;
+  margin-top: 2px;
+  margin-left: 2px;
+}
+.responsive{
+  display: none;
+  visibility: hidden;
+  opacity: 0;
+  width: 3%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: 0.5s linear;
+}
+.bar{
+  transition: 0.5s;
+  width: 50%;
+  margin: 2px;
+  height: 3px;
+  background-color: black;
+}
+.responsive:hover{
+  cursor: pointer;
+}
+.responsive:hover .bar1 , .bar:hover .bar1{
+  transform: translateY(8px) rotate(45deg);
+}
+.responsive:hover .bar2{
+  display: none;
+}
+.responsive:hover .bar3 , .bar:hover .bar3{
+  transform: translateY(1px) rotate(-45deg);
+}
+
+
+@media screen and (max-width:750px){
+  .header{
+      padding: 10px 2px;
   }
-  .checkbox:checked + .label .ball{
-    transform: translateX(25px);
+  .header-link{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-direction: row;
+      height: -webkit-fill-available;
+      z-index: 999;
   }
-  .ball{
-    background-color: white;
-    border-radius: 50%;
-    top: 2px;
-    left: 2px;
-    height: 25px;
-    width: 25px;
-    position: absolute;
-    transition:  0.5s  ;
+  .header-link .link{
+      margin: unset;
   }
-  
-  body.dark .ball{
-    background-color: black;
-    transition: 0.7s;
+  .link::after{
+      display: none;
+  }
+  .responsive{
+      width: 16%;
+  }
+  .icon-link{
+      margin: 15px 10px;
   }
   .toogle-button{
-    /* position: absolute; */
-    display: flex;
-    justify-content: space-between;
+      display: none;
+      visibility: hidden;
+      opacity: 0;
   }
-  .label{
-    background-color: black;
-    display: flex;
-    justify-content: space-between;
-    border-radius: 50px;
-    position: relative;
-    height: 28px;
-    width: 55px;
-  }
-  
-  body.dark .label{
-    /* background-color: white; */
-    border: 2px solid;
-  }
-  .checkbox{
-    opacity: 0;
-    position:absolute;
-  }
-  .label:hover{
-    cursor: pointer;
-  }
-  
-  .dark{
-    color: black;
-    z-index: 999;
-    margin-right: 3px;
-    margin-top: 2px;
-  }
-  .bright{
-    color: black;
-    z-index: 999;
-    margin-top: 2px;
-    margin-left: 2px;
-  }
+}
