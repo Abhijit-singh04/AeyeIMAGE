@@ -1,0 +1,37 @@
+.home{
+    width: 80%;
+    margin: 3rem auto;
+}
+.home-head{
+    width: 45%;
+    margin: auto;
+}
+.home-head h4{
+    font-size: 50px;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    text-shadow: 3px 3px 5px rgba(0,0,0,0.3);
+    padding: 0px 10px 20px;
+}
+.home-head span{
+    color: #0073e6;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+}
+.home-head p{
+    text-align: center;
+    margin: auto;
+    color: grey;
+    padding: 0px 10px 20px;
+}
+.home-button{
+    width: 40%;
+    margin: auto;
+}
+.home-button input{
+    width: 80%;
+    height: 2.5rem;
+    border-radius: 25px;
+    border: solid thin;
+    padding: 3px 15px;
+}

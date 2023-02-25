@@ -36,3 +36,11 @@
     transform: rotate(360deg);
   }
 }
+[dark-theme="dark"]{
+  --primary: #0073e6;
+  --back: black;
+}
+:root{
+  --primary : red;
+  --back: black;
+}
