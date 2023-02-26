@@ -1,4 +1,4 @@
-import React , {useRef , useEffect} from 'react';
+import React , {} from 'react';
 import { Link } from 'react-router-dom';
 import "./header.css";
 import HomeIcon from '@mui/icons-material/Home';
@@ -15,15 +15,15 @@ function Header() {
     setTheme(newTheme) ;
   }
  
-  const ref = useRef(null);
-  const bar = useRef(null);
+  // const ref = useRef(null);
+  // const bar = useRef(null);
   // useEffect(() => {
   //   const handleClick = event => {
   //     console.log('Button clicked');
   //   };
 
-    const element = ref.current;
-    const bart = bar.current;
+    // const element = ref.current;
+    // const bart = bar.current;
 
   //   element.addEventListener('click', handleClick);
 
@@ -58,7 +58,7 @@ function Header() {
                 <HomeIcon className='icon-2' />
               </div>
             </div>
-            home
+            About
           </Link>
         </div>
         <div className='icon-link'>
@@ -69,7 +69,7 @@ function Header() {
                 <HomeIcon className='icon-2' />
               </div>
             </div>
-            home
+            Contact
           </Link>
         </div>
         <div className='icon-link'>

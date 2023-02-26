@@ -1,0 +1,48 @@
+// import s from "../../public/image/spiderman.jpg"
+
+export const data = [
+    {
+        id:1,
+        image:"../image/huhu.jpg"
+    },
+    {
+        id:2,
+        image:"../image/singh.jpg"
+    },
+    {
+        id:3,
+        image:"../image/abhi.jpg"
+    },
+    {
+        id:4,
+        image:"../image/spiderman.jpg"
+    },
+    {
+        id:5,
+        image:"../image/spiderman.jpg"
+    },
+    {
+        id:6,
+        image:"../image/spiderman.jpg"
+    },
+    {
+        id:7,
+        image:"../image/spiderman.jpg"
+    },
+    {
+        id:8,
+        image:"../image/spiderman.jpg"
+    },
+    {
+        id:9,
+        image:"../image/spiderman.jpg"
+    },
+    {
+        id:10,
+        image:"../image/spiderman.jpg"
+    },
+    {
+        id:11,
+        image:"../image/spiderman.jpg"
+    }
+]
