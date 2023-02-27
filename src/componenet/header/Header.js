@@ -5,6 +5,10 @@ import HomeIcon from '@mui/icons-material/Home';
 import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
 import Brightness7Icon from '@mui/icons-material/Brightness7';
 import Brightness3Icon from '@mui/icons-material/Brightness3';
+import CallIcon from '@mui/icons-material/Call';
+import PhoneForwardedOutlinedIcon from '@mui/icons-material/PhoneForwardedOutlined';
+import PeopleAltIcon from '@mui/icons-material/PeopleAlt';
+import GroupOutlinedIcon from '@mui/icons-material/GroupOutlined';
 import useLocalStorage from 'use-local-storage';
 
 function Header() {
@@ -54,8 +58,8 @@ function Header() {
           <Link className='link' to="/">
             <div className='hovering-box'>
               <div className='hovering'>
-                <HomeOutlinedIcon className='icon' />
-                <HomeIcon className='icon-2' />
+                <PhoneForwardedOutlinedIcon className='icon' />
+                <CallIcon className='icon-2' />
               </div>
             </div>
             About
@@ -65,14 +69,14 @@ function Header() {
           <Link className='link' to="/">
             <div className='hovering-box'>
               <div className='hovering'>
-                <HomeOutlinedIcon className='icon' />
-                <HomeIcon className='icon-2' />
+                <GroupOutlinedIcon className='icon' />
+                <PeopleAltIcon className='icon-2' />
               </div>
             </div>
             Contact
           </Link>
         </div>
-        <div className='icon-link'>
+        {/* <div className='icon-link'>
           <Link className='link' to="/">
             <div className='hovering-box'>
               <div className='hovering'>
@@ -82,7 +86,7 @@ function Header() {
             </div>
             home
           </Link>
-        </div>
+        </div> */}
       </div>
       <div class="toogle-button" onClick={switchTheme}>
         <input type="checkbox" class="checkbox" id="checkbox" />
