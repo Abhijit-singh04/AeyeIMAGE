@@ -52,7 +52,12 @@ img{
     box-sizing: border-box;
     display: flex;
     align-items: center;
-    background-color: #ebeaeac9;
+    /* background-color: #ebeaeac9; */
+    background: linear-gradient(to bottom , #ebeaeac9 0 ,
+     #f7f5f5c9 25%, 
+     #f6f6f6c9 50%, 
+     #f5f4f4c9 75%),
+     #fdfbfbc9 100%;
     justify-content: center;
     visibility: hidden;
 }

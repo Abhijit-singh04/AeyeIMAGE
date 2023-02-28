@@ -27,7 +27,7 @@ function image() {
                             <img className='image' key={item.id} src={item.image} />
                         </div>
                         <div className='image-icon face face2'>
-                            <DownloadForOfflineIcon className='icononimage' sx={sx} />
+                            <a href={item.image} download content="download"><DownloadForOfflineIcon className='icononimage' sx={sx} /></a>
                         </div>
                     </div>
                 ))
