@@ -1,4 +1,4 @@
-import React , {} from 'react';
+import React  from 'react';
 import { Link } from 'react-router-dom';
 import "./header.css";
 import HomeIcon from '@mui/icons-material/Home';
@@ -9,15 +9,14 @@ import CallIcon from '@mui/icons-material/Call';
 import PhoneForwardedOutlinedIcon from '@mui/icons-material/PhoneForwardedOutlined';
 import PeopleAltIcon from '@mui/icons-material/PeopleAlt';
 import GroupOutlinedIcon from '@mui/icons-material/GroupOutlined';
-import useLocalStorage from 'use-local-storage';
 
 function Header() {
 
-  const [theme , setTheme] = useLocalStorage("theme" ? "dark" : "light");
-  const switchTheme = () =>{
-    const newTheme = theme === "light"? "dark" : "light";
-    setTheme(newTheme) ;
-  }
+  // const [theme , setTheme] = useLocalStorage("theme" ? "dark" : "light");
+  // const switchTheme = () =>{
+  //   const newTheme = theme === "light"? "dark" : "light";
+  //   setTheme(newTheme) ;
+  // }
  
   // const ref = useRef(null);
   // const bar = useRef(null);
@@ -38,7 +37,7 @@ function Header() {
 
 
   return (
-    <div className='header' data-theme={theme}>
+    <div className='header' >
       <div className='header-logo'>
         <h5>XYZ</h5>
       </div>
@@ -88,14 +87,14 @@ function Header() {
           </Link>
         </div> */}
       </div>
-      <div class="toogle-button" onClick={switchTheme}>
+      {/* <div class="toogle-button" >
         <input type="checkbox" class="checkbox" id="checkbox" />
         <label for="checkbox" class="label">
           <Brightness7Icon className='bright' />
           <Brightness3Icon className='dark' />
           <div class="ball"></div>
         </label>
-      </div>
+      </div> */}
       {/* <div className='responsive' ref={ref}>
         <div className='bar bar1' ref={bar}></div>
         <div className='bar bar2'></div>

@@ -1,4 +1,4 @@
-let bar = document.getElementsByClassName("bar");
-bar.addEventListener("click", function(){
-    console.log("hii");
-})
+// let bar = document.getElementsByClassName("bar");
+// bar.addEventListener("click", function(){
+//     console.log("hii");
+// })

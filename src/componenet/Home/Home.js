@@ -2,7 +2,9 @@ import React from 'react';
 import "./home.css";
 import Hero from '../hero/Hero'
 import background from '../../background.jpg'
-import Image from '../Images/image';
+import Image from '../images/Image'
+
+
 
 function Home() {
   return (<>
@@ -13,7 +15,7 @@ function Home() {
       <div className='home__container'>
         <Hero />
       </div>
-      <Image />
+      <Image/>
     </div>
 
   </>
