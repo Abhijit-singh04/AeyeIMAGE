@@ -26,7 +26,7 @@
 }
 .hero-button{
     display: flex;
-    width: 65%;
+    width: 78%;
     margin: auto;
     justify-content: center;
     align-items: center;
@@ -58,7 +58,7 @@
     transition: 0.6s;
 }
 .hero-button button:hover{
-    padding-right: 40px;
+    padding-right: 45px;
 }
 .hero-button button::before {
     content: " ";
@@ -130,15 +130,22 @@
 }
 .search-icon{
     position: absolute;
-    top: 1rem;
+    /* top: 1rem; */
     padding: 0 15px;
 }
 .hero-input{
+    display: flex;
+    align-items: center;
     position: relative;
     width: 78%;
 }
 .hero-input input:focus-visible{
     outline: none;
+}
+.icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 @media screen and (max-width:500px){

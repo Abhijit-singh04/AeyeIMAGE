@@ -4,7 +4,7 @@ const AppContext = React.createContext()
 
 const AppProvider = ({ children }) => {
 
-    const [loading, setLoading] = useState(true)
+    const [loading, setLoading] = useState(false)
     const [data, setData] = useState([])
 
     //   const fetchDrinks = useCallback( async () => {
@@ -56,6 +56,13 @@ const AppProvider = ({ children }) => {
 
     };
 
+    const loading_func =()=>{
+        setLoading(true);
+    };
+    const loading_func_opp=()=>{
+        setLoading(false);
+    };
+
     return (
         <AppContext.Provider
             value={
@@ -63,6 +70,8 @@ const AppProvider = ({ children }) => {
                     loading,
                     data,
                     Changing,
+                    loading_func,
+                    loading_func_opp,
                 }}
         >
             {children}
