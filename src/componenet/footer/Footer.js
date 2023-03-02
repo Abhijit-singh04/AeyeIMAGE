@@ -1,8 +1,19 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
+import "./footer.css"
 
 function Footer() {
   return (
-    <div>Footer</div>
+    
+      <div className='footer'>
+        <div className='footer-link'>
+          <Link className='links' to="/about">About</Link>
+          <hr />
+          <Link className='links' to="/contact">Contact</Link>
+        </div>
+        <hr />
+        <h5>Copyrights &#169; | 2023. All Rights Reserved </h5>
+      </div>
   )
 }
 

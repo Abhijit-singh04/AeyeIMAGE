@@ -1,11 +1,13 @@
 import React, { useState, useContext } from 'react'
+import { Initial_data } from '../componenet/data.js'
 // import { useCallback } from 'react'
 const AppContext = React.createContext()
+
 
 const AppProvider = ({ children }) => {
 
     const [loading, setLoading] = useState(false)
-    const [data, setData] = useState([])
+    const [data, setData] = useState(Initial_data)
 
     //   const fetchDrinks = useCallback( async () => {
     //     setLoading(true)

@@ -20,7 +20,7 @@ img{
     object-fit: cover;
     position: relative;
     transition: all 0.3s ease-in-out;
-    margin: 0rem 0rem 2rem 0rem;
+    /* margin: 0rem 0rem 2rem 0rem; */
 }
 .face1 , .face2{
     width: 100%;

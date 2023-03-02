@@ -3,6 +3,7 @@ import "./home.css";
 import Hero from '../hero/Hero'
 import background from '../../background.jpg'
 import Image from '../images/Image'
+import Makecontact from './../Contact/Makecontact';
 
 
 
@@ -16,6 +17,7 @@ function Home() {
         <Hero />
       </div>
       <Image/>
+      <Makecontact />
     </div>
 
   </>

@@ -1,3 +1,7 @@
+
+/* input:search'.attr('placeholder','Some New Text'); */
+
+
 .hero{
     width: 80%;
     margin: 3rem auto;
@@ -93,6 +97,7 @@
     position: relative;
     display: flex;
 }
+
 .forward-icon{
     position: absolute;
     top: 1rem;
@@ -146,6 +151,45 @@
     display: flex;
     align-items: center;
     justify-content: center;
+}
+.btn{
+    color: blue;
+    position: relative;
+    height: 56px;
+    width: 73%;
+    top: 12px;
+    margin: auto;
+  }
+  .flex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .line-1{
+    position: relative;
+    top: 50%;  
+    width: 24em;
+    margin: 0 auto;
+    border-right: 2px solid rgba(255,255,255,.75);
+    font-size: 180%;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    transform: translateY(-50%);    
+}
+
+/* Animation */
+.anim-typewriter{
+  animation: typewriter 4s steps(44) 1s 1 normal both,
+             blinkTextCursor 500ms steps(44) infinite normal;
+}
+@keyframes typewriter{
+  from{width: 0;}
+  to{width: 24em;}
+}
+@keyframes blinkTextCursor{
+  from{border-right-color: rgba(255,255,255,.75);}
+  to{border-right-color: transparent;}
 }
 
 @media screen and (max-width:500px){

@@ -54,7 +54,7 @@ function Header() {
           </Link>
         </div>
         <div className='icon-link'>
-          <Link className='link' to="/">
+          <Link className='link' to="/about">
             <div className='hovering-box'>
               <div className='hovering'>
                 <PhoneForwardedOutlinedIcon className='icon' />
@@ -65,7 +65,7 @@ function Header() {
           </Link>
         </div>
         <div className='icon-link'>
-          <Link className='link' to="/">
+          <Link className='link' to="/contact">
             <div className='hovering-box'>
               <div className='hovering'>
                 <GroupOutlinedIcon className='icon' />

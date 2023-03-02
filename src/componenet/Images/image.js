@@ -3,7 +3,7 @@ import "./image.css";
 // import spider from "../../spiderman.jpg";
 import DownloadForOfflineIcon from '@mui/icons-material/DownloadForOffline';
 import { useGlobalContext } from './../../context/context';
-import { data } from '../data';
+// import { data } from '../data';
 
 function Image() {
     const { data } = useGlobalContext();
