@@ -1,39 +1,26 @@
-import React  from 'react';
+import React, { useContext, useState }  from 'react';
 import { Link } from 'react-router-dom';
 import "./header.css";
 import HomeIcon from '@mui/icons-material/Home';
 import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
-import Brightness7Icon from '@mui/icons-material/Brightness7';
-import Brightness3Icon from '@mui/icons-material/Brightness3';
+import LightModeIcon from '@mui/icons-material/LightMode';
+import DarkModeIcon from '@mui/icons-material/DarkMode';
 import CallIcon from '@mui/icons-material/Call';
 import PhoneForwardedOutlinedIcon from '@mui/icons-material/PhoneForwardedOutlined';
 import PeopleAltIcon from '@mui/icons-material/PeopleAlt';
 import GroupOutlinedIcon from '@mui/icons-material/GroupOutlined';
+import { useGlobalContext } from './../../context/context';
 
 function Header() {
+   
+  const {toggleTheme} = useGlobalContext();
 
-  // const [theme , setTheme] = useLocalStorage("theme" ? "dark" : "light");
-  // const switchTheme = () =>{
-  //   const newTheme = theme === "light"? "dark" : "light";
-  //   setTheme(newTheme) ;
-  // }
- 
-  // const ref = useRef(null);
-  // const bar = useRef(null);
-  // useEffect(() => {
-  //   const handleClick = event => {
-  //     console.log('Button clicked');
-  //   };
+  const [mode , setMode] = useState(true);
+  const changemode = () => {
+    setMode(!mode);
+    toggleTheme();
+  }
 
-    // const element = ref.current;
-    // const bart = bar.current;
-
-  //   element.addEventListener('click', handleClick);
-
-  //   return () => {
-  //     element.removeEventListener('click', handleClick);
-  //   };
-  // }, []);
 
 
   return (
@@ -100,6 +87,13 @@ function Header() {
         <div className='bar bar2'></div>
         <div className='bar bar3'></div>
       </div> */}
+      <div className='mode-icon'>
+        <button onClick={changemode}>
+          {
+            mode ? <LightModeIcon /> : <DarkModeIcon />
+          }
+        </button>
+      </div>
     </div>
   )
 }

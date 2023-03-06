@@ -9,3 +9,29 @@ body{
   padding: 0;
   box-sizing: border-box;
 }
+
+
+
+.dark{
+  --bg: #0f0c0c;
+  --text:#f9f4f4;
+  --back:#1f1f29;
+  --home-back:#1f1f29;
+  --coninfoot:#74beffed;
+  --foter:#101014;
+  --about:#17171f;
+}
+.light{
+  --bg:white;
+  --text:#291f1f;
+  --back:#f5f5fa;
+  --home-back: rgba(5255,255,255,0.5);
+  --coninfoot:#a3c9eb8a;
+  --foter:rgb(209 209 209);
+  --about:#f6f3f3;
+}
+.App{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}

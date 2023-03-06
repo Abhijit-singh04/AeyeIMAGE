@@ -7,41 +7,28 @@ import useLocalStorage from "use-local-storage";
 import { ColorRing } from "react-loader-spinner"
 import { useEffect, useState } from 'react';
 import Contact from './componenet/Contact/Contact';
+import About from './componenet/About/About';
+import { themes } from './context/ThemeContext';
+import { useGlobalContext } from './context/context';
 
 function App() {
 
-
-  // const icon ={
-  //   display:"flex",
-  //   alignItems:"center",
-  //   justifyContent:"center",
-  //   width:"100%",
-  //   height:"100vh"
-  // }
-
-  // const [theme , setTheme] = useLocalStorage("theme" ? "dark" : "light");
-  // const switchTheme = () =>{
-  //   const newTheme = theme === "light"? "dark" : "light";
-  //   setTheme(newTheme) ;
-  // }
+  const {theme} = useGlobalContext();
+  console.log("app theme=>",theme)
 
 
   return (
-    // <div data-theme={theme}>
-    <>
+    <div className={`App ${theme}`}>
       <Router>
         <Header />
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/contact' element={<Contact />} />
+          <Route path='/about' element={<About />} />
         </Routes>
-        <Footer/>
+        <Footer />
       </Router>
-    </>
-
-
-
-    // </div>
+    </div>
 
   );
 }

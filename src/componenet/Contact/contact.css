@@ -1,3 +1,7 @@
+.oops{
+    background-color: var(--bg);
+}
+
 .contactinfooter{
     padding: 40px 25px;
     display: flex;
@@ -5,7 +9,7 @@
     justify-content: space-around;
     width: 100%;
     margin: auto;
-    background-color: #a3c9eb8a;
+    background-color: var(--coninfoot);
     margin-top: 3rem;
 }
 .contactinfooter h4{
@@ -102,8 +106,8 @@
     justify-content: space-around;
     width: 100%;
     height: auto;
-    padding: 2rem;
-    margin-top: 1rem;
+    padding: 3rem;
+    background-color: var(--back);
 }
 .contact-image{
     position: relative;
@@ -191,10 +195,21 @@
         width: 90%;
         margin: auto;
     }
+    .contactinfooter h4{
+        width: unset;
+        /* margin: auto; */
+    }
 }
 
 @media screen and (min-width:801px) and (max-width:1025px){
     .contact .contact-form{
         width: 90%;
+    }
+}
+
+@media screen and (max-width:750px){
+    .contact{
+        position: relative;
+        bottom: 5rem;
     }
 }

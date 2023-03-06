@@ -1,15 +1,4 @@
-:root{
-  --primary : #0073e6;
-  /* --background: yellow; */
-}
-[data-theme="dark"]{
-  --primary: #0073e6;
-  /* --background: black; */
-}
-body{
-  background-color: var(--background);
-  box-sizing: border-box;
-}
+
 .header{
   display: flex;
   flex-direction: row;
@@ -19,6 +8,8 @@ body{
   box-sizing: border-box;
   box-shadow: 0px 0px 5px rgb(31 31 31 / 25%);
   padding: 15px;
+  background-color: var(--bg);
+  color: var(--text);
 }
 .header-logo h5{
   font-size: 24px;
@@ -82,7 +73,7 @@ body{
   position: absolute;
   transition: 0.5s;
   /* background: #0073e6; */
-  background-color: var(--primary);
+  background-color: #0073e6;
 }
 .link:hover:after{
   width: 4%;
@@ -96,66 +87,7 @@ body{
   border-radius: 10px;
 }
 
-body , .container , .label{
-  transform: background-color 2s linear ;
-}
-.checkbox:checked + .label .ball{
-  transform: translateX(25px);
-}
-.ball{
-  background-color: white;
-  border-radius: 50%;
-  top: 2px;
-  left: 2px;
-  height: 25px;
-  width: 25px;
-  position: absolute;
-  transition:  0.5s  ;
-}
 
-body.dark .ball{
-  background-color: black;
-  transition: 0.7s;
-}
-.toogle-button{
-  /* position: absolute; */
-  display: flex;
-  justify-content: space-between;
-}
-.label{
-  background-color: black;
-  display: flex;
-  justify-content: space-between;
-  border-radius: 50px;
-  position: relative;
-  height: 28px;
-  width: 55px;
-}
-
-body.dark .label{
-  /* background-color: white; */
-  border: 2px solid;
-}
-.checkbox{
-  opacity: 0;
-  position:absolute;
-}
-.label:hover{
-  cursor: pointer;
-}
-
-.dark{
-  color: black;
-  z-index: 999;
-  margin-right: 3px;
-  margin-top: 2px;
-}
-.bright{
-  color: black;
-  z-index: 999;
-  margin-top: 2px;
-  margin-left: 2px;
-}
 .responsive{
   display: none;
   visibility: hidden;
@@ -188,12 +120,28 @@ body.dark .label{
   transform: translateY(1px) rotate(-45deg);
 }
 
+.mode-icon button{
+  position: relative;
+  border: solid thin rgb(226, 222, 222);
+  padding: 5px;
+  align-items: center;
+  display: flex;
+  border-radius: 25px;
+  color: var();
+}
+.mode-icon button{
+  cursor: pointer;
+}
 
 @media screen and (max-width:750px){
   .header{
       padding: 10px 2px;
   }
+  .header-logo h5{
+    font-size: 18px;
+  }
   .header-link{
+      width: 55%;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -203,6 +151,7 @@ body.dark .label{
   }
   .header-link .link{
       margin: unset;
+      font-size: 7px;
   }
   .link::after{
       display: none;
@@ -217,5 +166,14 @@ body.dark .label{
       display: none;
       visibility: hidden;
       opacity: 0;
+  }
+  .header{
+    top: 90vh;
+    height: 10vh;
+    left: 0;
+    background-color: white;
+    width: 100%;
+    z-index: 999;
+    position: sticky;
   }
 }

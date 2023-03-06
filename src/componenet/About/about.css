@@ -1,0 +1,92 @@
+.about{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 4rem;
+    gap: 5rem;
+    background-color: var(--about);
+    color: var(--text);
+    z-index: -999;
+}
+.about-info{
+    width: 60%;
+    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+.about-info mark{
+    border-radius: 25px 10px 50px 10px;
+    width: 90%;
+    margin: auto;
+}
+.about em::before{
+    content: open-quote;
+    font-size: 25px;
+    margin-right: 6px;
+}
+.about em::after{
+    content: close-quote;
+    font-size: 25px;
+    margin-left: 6px;
+}
+.about p , em{
+    width: 100%;
+    margin: auto;
+    text-align: left;
+}
+.about figure{
+    width: 65%;
+}
+
+@media screen and (max-width:500px) {
+    .about{
+        display: unset;
+        padding: unset;
+    }
+    .about figure{
+        width: unset;
+    }
+    .about .about-info{
+        display: unset;
+        text-align: center;
+    }
+    .about .about-info p{
+        width: 90%;
+        margin: auto;
+        text-align: left;
+        margin-bottom: 1rem;
+    }
+    .about .about-info em{
+        width: 90%;
+        display: block;
+        margin: auto;
+        text-align: left;
+        margin-bottom: 1rem;
+    }
+    .about p , em{
+        width: 80%;
+    }
+}
+
+@media screen and (max-width:1100px) and (min-width:500px){
+    .about{
+        display: unset;
+    }
+    .about figure ,.about .about-info{
+        width: unset;
+    }
+    .about p , em{
+        width: 80%;
+    }
+}
+
+
+@media screen and (max-width:750px){
+    .about{
+        position: relative;
+        bottom: 4rem;
+    }
+}

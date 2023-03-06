@@ -2,9 +2,11 @@
     /* background-color: red; */
     display:flex;
     flex-wrap: wrap;
-    width: 90%;
+    /* width: 90%; */
+    padding: 2rem 5rem;
     margin: auto;
     gap: 15px;
+    background-color: var(--bg);
 }
 /* .image{
   

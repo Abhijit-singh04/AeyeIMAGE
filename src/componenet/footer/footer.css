@@ -5,7 +5,8 @@
     align-items: center;
     padding: 45px 15px;
     gap: 10px;
-    background-color: rgb(209, 209, 209);
+    background-color: var(--foter);
+    color: var(--text);
 }
 .footer-link{
     display: flex;
@@ -18,6 +19,7 @@
     text-decoration: none;
     color: black;
     transition: 0.5s;
+    color: var(--text);
 }
 .footer-link hr{
     width: 30%;
@@ -48,3 +50,9 @@ hr{
     width: 100%;
 }
 
+@media screen and (max-width:750px){
+    .footer{
+        position: relative;
+        bottom: 3rem;
+    }
+}
