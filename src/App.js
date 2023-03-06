@@ -18,7 +18,7 @@ function App() {
 
 
   return (
-    <div className={`App ${theme}`}>
+    <div className={`App ${theme }`}>
       <Router>
         <Header />
         <Routes>
