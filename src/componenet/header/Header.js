@@ -13,9 +13,11 @@ import { useGlobalContext } from './../../context/context';
 
 function Header() {
    
+  // global variable
   const {toggleTheme} = useGlobalContext();
 
   const [mode , setMode] = useState(true);
+  
   const changemode = () => {
     setMode(!mode);
     toggleTheme();

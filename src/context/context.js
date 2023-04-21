@@ -9,7 +9,7 @@ const AppProvider = ({ children }) => {
     const [loading, setLoading] = useState(false)
     const [data, setData] = useState(Initial_data)
 
-     const [theme, setTheme] = useState('light');
+     const [theme, setTheme] = useState('light')
 
       const toggleTheme = () => {
         // console.log("themee->",theme)

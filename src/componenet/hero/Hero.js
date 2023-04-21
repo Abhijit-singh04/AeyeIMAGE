@@ -17,7 +17,6 @@ function Hero() {
 
   async function onSubmit(e) {
     e.preventDefault();
-    // setloading(true);
     loading_func();
     Changing([]);
     setStr(true)
@@ -58,7 +57,7 @@ function Hero() {
             type="search"
             placeholder='Search your Image'
             value={query}
-            onChange={(e) => setQuery(e.target.value)}
+            onChange={(e) => setQuery(e.target.value)} 
           >
           </input>
           <div className='search-icon'><SearchIcon className='icon' /></div>
